@@ -47,7 +47,6 @@
               <dt class="availability__parameter text">Наличие:</dt>
               <dd class="availability__value">Есть в наличии</dd>
             </dl>
-            </dl>
             <p class="product-cart__text text">Ajmal Shadow Blue for him («Аджмал Шадоу Блу фо хим») от Ajmal – необыкновенный, влекущий и волнующий воображение парфюм для истинных мужчин. Древесный, пряный аромат был создан в 2008 году.</p>
             <div class="product-cart__video-container video-container">
               <img src="img/video-demo.jpg" class="video-container__img-demo">
@@ -67,25 +66,31 @@
           <button type="submit" class="product-cart__button-box button-box">
             <span class="button-box__text"></span>
           </button>
+        </form>
       </div>
-      </form>
-      <div class="new-product__presentation">
-        <div class="new-product__foreshortening foreshortening">
+      <div class="new-product__presentation presentation">
+        <div class="presentation__foreshortening foreshortening">
           <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
           <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
           <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
           <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
         </div>
-        <img src="img/ajmal-shadow@4x.png" alt="Голубой флакон" class="foreshortening__product" width="180" height="426">
-        <div class="foreshortening__control control">
+        <img src="img/ajmal-shadow.png" alt="Голубой флакон" class="presentation__product" srcset="img/ajmal-shadow@2x.png 2x">
+        <div class="presentation__control control">
           <button class="control__button control__button--left" aria-label="Кнопка влево">
           </button>
           <button class="control__button control__button--right" aria-label="Кнопка вправо">
           </button>
         </div>
+        <button type="button" class="presentation__zoom-button" aria-label="Увеличить изображение"></button>
       </div>
     </section>
   </main>
+  <div class="modal">
+    <button class="modal__button" type="button" aria-label="Кнопка закрыть">
+    </button>
+    <img src="img/ajmal-shadow@4x.png" alt="Голубой флакон" class="modal__img">
+  </div>
 </body>
 
 </html>
