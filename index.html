@@ -1,0 +1,91 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1400">
+  <title>Тестовое задание от ILAR</title>
+  <link rel="stylesheet" href="css/normadivze.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <p class="header__logo"> SHOP </p>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="#" class="header__link"> КАТАЛОГ</li>
+        </a>
+        <li class="header__item"><a href="#" class="header__link">ОБЗОРЫ</a></li>
+        <li class="header__item"><a href="#" class="header__link">GOODBOOK</a></li>
+        <li class="header__item"><a href="#" class="header__link">АКЦИИ</a></li>
+      </ul>
+    </nav>
+    <p class="header__text header__text--tel">8 999 999-99-99</p>
+    <p class="header__text">Бесплатно по России</p>
+    <button class="header__button" type="button" aria-label="Открыть меню">
+    </button>
+  </header>
+  <main class="main">
+    <h1 class="visually-hidden">Магазин парфюмерии</h1>
+    <section class="new-product">
+      <div class="new-product__product-cart product-cart">
+        <p class="product-cart__text product-cart__text--new">New</p>
+        <button class="product-cart__button-like" type="button" aria-label="Кнопка лайк"></button>
+        <form action="https://echo.htmlacademy.ru/" class="product-cart__form">
+          <div class="product-cart__container">
+            <h3 class="product-cart__type">Shadow For Him </h3>
+            <h2 class="product-cart__title">AJMAL, 75 мл</h2>
+            <div class="product-cart__item article">
+              <label class="article__parameter text" for="article">Артикул:</label>
+              <input readonly type="text" class="article__value" name="product-article" id="article" value="PV-213327">
+            </div>
+            <dl class="product-cart__list availability">
+              <dt class="availability__parameter text">Наличие:</dt>
+              <dd class="availability__value">Есть в наличии</dd>
+            </dl>
+            </dl>
+            <p class="product-cart__text text">Ajmal Shadow Blue for him («Аджмал Шадоу Блу фо хим») от Ajmal – необыкновенный, влекущий и волнующий воображение парфюм для истинных мужчин. Древесный, пряный аромат был создан в 2008 году.</p>
+            <div class="product-cart__video-container video-container">
+              <img src="img/video-demo.jpg" class="video-container__img-demo">
+              <button class="video-container__button" type="button" aria-label="Кнопка Play"></button>
+            </div>
+            <p class="product-cart__text text"> ВИДЕО О ТОВАРЕ </p>
+          </div>
+          <div class="product-cart__price price">
+            <p class="price__text">4 200 ₽</p>
+          </div>
+          <div class="product-cart__quantity quantity">
+            <label class="quantity__parameter text" for="quntity">Количество</label>
+            <button class="quantity__button quantity__button--minus" type="button" aria-label="Уменьшить количество товара"></button>
+            <input type="number" class="quantity__value" name="product-quantity" id="quantity" value="1">
+            <button class="quantity__button quantity__button--plus" type="button" aria-label="Увеличить количество товара"></button>
+          </div>
+          <button type="submit" class="product-cart__button-box button-box">
+            <span class="button-box__text"></span>
+          </button>
+      </div>
+      </form>
+      <div class="new-product__presentation">
+        <div class="new-product__foreshortening foreshortening">
+          <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
+          <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
+          <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
+          <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
+        </div>
+        <img src="img/ajmal-shadow@4x.png" alt="Голубой флакон" class="foreshortening__product" width="180" height="426">
+        <div class="foreshortening__control control">
+          <button class="control__button control__button--left" aria-label="Кнопка влево">
+          </button>
+          <button class="control__button control__button--right" aria-label="Кнопка вправо">
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
