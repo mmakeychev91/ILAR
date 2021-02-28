@@ -56,24 +56,48 @@
                 </div>
               </div>
               <p class="product-cart__text product-cart__text--product-description text">Ajmal Shadow Blue for him («Аджмал Шадоу Блу фо хим») от Ajmal – необыкновенный, влекущий и волнующий воображение парфюм для истинных мужчин. Древесный, пряный аромат был создан в 2008 году.</p>
-              <div class="product-cart__video-container video-container">
-                <img src="img/video-demo.jpg" class="video-container__img-demo">
-                <button class="video-container__button" type="button" aria-label="Кнопка Play"></button>
+              <div class="product-cart__video-box">
+                <div class="product-cart__video-container video-container">
+                  <img src="img/video-demo.jpg" class="video-container__img-demo">
+                  <button class="video-container__button" type="button" aria-label="Кнопка Play"><span></span></button>
+                </div>
+                <p class="product-cart__text product-cart__text--video-about text"> Видео о товаре </p>
               </div>
-              <p class="product-cart__text text"> ВИДЕО О ТОВАРЕ </p>
             </div>
-            <div class="product-cart__price price">
-              <p class="price__text">4 200 ₽</p>
+            <div class="product-cart__bottom-row">
+              <div class="product-cart__price price">
+                <p class="price__text">4 200 ₽</p>
+              </div>
+              <div class="product-cart__quantity quantity">
+                <label class="quantity__parameter text" for="quntity">Количество</label>
+                <button class="quantity__button quantity__button--minus" type="button" aria-label="Уменьшить количество товара">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="5" height="2" viewBox="0 0 5 2">
+                    <g>
+                      <g>
+                        <g><text dominant-baseline="text-before-edge" style="line-height:46px;font-kerning:normal" fill="gray" font-family="'Montserrat','Montserrat-Medium'" font-size="14" transform="translate(0 -9)">
+                            <tspan>-</tspan>
+                          </text></g>
+                      </g>
+                    </g>
+                  </svg>
+                </button>
+                <input type="number" class="quantity__value" name="product-quantity" id="quantity" value="1">
+                <button class="quantity__button quantity__button--plus" type="button" aria-label="Увеличить количество товара">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7">
+                    <g>
+                      <g>
+                        <g><text dominant-baseline="text-before-edge" style="line-height:46px;font-kerning:normal" fill="#292929" font-family="'Montserrat','Montserrat-Medium'" font-size="14" transform="translate(0 -5)">
+                            <tspan>+</tspan>
+                          </text></g>
+                      </g>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <button type="submit" class="product-cart__button-box button-box">
+                <span class="button-box__text"></span>
+              </button>
             </div>
-            <div class="product-cart__quantity quantity">
-              <label class="quantity__parameter text" for="quntity">Количество</label>
-              <button class="quantity__button quantity__button--minus" type="button" aria-label="Уменьшить количество товара"></button>
-              <input type="number" class="quantity__value" name="product-quantity" id="quantity" value="1">
-              <button class="quantity__button quantity__button--plus" type="button" aria-label="Увеличить количество товара"></button>
-            </div>
-            <button type="submit" class="product-cart__button-box button-box">
-              <span class="button-box__text"></span>
-            </button>
           </form>
         </div>
         <div class="new-product__presentation presentation">
