@@ -372,6 +372,7 @@ body {
   height: 17px;
   border: none;
   background-image: url("../img/icons/like.svg");
+  background-repeat: no-repeat;
   background-color: transparent;
   cursor: pointer;
 }
