@@ -500,12 +500,29 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 20px 32px 20px;
 }
+.quantity__input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .quantity__button {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none;
   background: transparent;
 }
@@ -525,4 +542,30 @@ body {
 }
 .quantity__button--plus {
   cursor: pointer;
+}
+
+input[type=number] {
+  width: 36px;
+}
+
+.button-box {
+  padding: 0 32px 0 77px;
+  cursor: pointer;
+  background-color: #fff3e0;
+  border: none;
+}
+.button-box__text {
+  position: relative;
+  color: #292929;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+.button-box__text:before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  width: 16px;
+  height: 19px;
+  background-image: url("../img/icons/packet.svg");
 }
