@@ -70,30 +70,32 @@
               </div>
               <div class="product-cart__quantity quantity">
                 <label class="quantity__parameter text" for="quntity">Количество</label>
-                <div class="quantity__input-box">
-                <button class="quantity__button quantity__button--minus" type="button" aria-label="Уменьшить количество товара">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="5" height="2" viewBox="0 0 5 2">
-                    <g>
-                      <g>
-                        <g><text dominant-baseline="text-before-edge" style="line-height:46px;font-kerning:normal" fill="gray" font-family="'Montserrat','Montserrat-Medium'" font-size="14" transform="translate(0 -9)">
-                            <tspan>-</tspan>
-                          </text></g>
-                      </g>
-                    </g>
-                  </svg>
-                </button>
-                <input type="number" min="1" max="99" class="quantity__value" name="product-quantity" id="quantity" value="1">
-                <button class="quantity__button quantity__button--plus" type="button" aria-label="Увеличить количество товара">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7">
-                    <g>
-                      <g>
-                        <g><text dominant-baseline="text-before-edge" style="line-height:46px;font-kerning:normal" fill="#292929" font-family="'Montserrat','Montserrat-Medium'" font-size="14" transform="translate(0 -5)">
-                            <tspan>+</tspan>
-                          </text></g>
-                      </g>
-                    </g>
-                  </svg>
-                </button>
+                <div class="quantity__input-box stepper stepper--style-3 js-spinner">
+                  <div class="stepper__controls">
+                    <button spinner-button="down" class="quantity__button quantity__button--minus" type="button" aria-label="Уменьшить количество товара">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="5" height="2" viewBox="0 0 5 2">
+                        <g>
+                          <g>
+                            <g><text dominant-baseline="text-before-edge" style="line-height:46px;font-kerning:normal" fill="gray" font-family="'Montserrat','Montserrat-Medium'" font-size="14" transform="translate(0 -9)">
+                                <tspan>-</tspan>
+                              </text></g>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+                    <button spinner-button="up" class="quantity__button quantity__button--plus" type="button" aria-label="Увеличить количество товара">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7">
+                        <g>
+                          <g>
+                            <g><text dominant-baseline="text-before-edge" style="line-height:46px;font-kerning:normal" fill="#292929" font-family="'Montserrat','Montserrat-Medium'" font-size="14" transform="translate(0 -5)">
+                                <tspan>+</tspan>
+                              </text></g>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                  <input type="number" min="1" max="99" step="1" class="quantity__value stepper__input" name="product-quantity" id="quantity" value="1">
                 </div>
               </div>
               <button type="submit" class="product-cart__button-box button-box">
@@ -104,28 +106,112 @@
         </div>
         <div class="new-product__presentation presentation">
           <div class="presentation__foreshortening foreshortening">
-            <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
-            <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
-            <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
-            <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото"></button>
+            <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6">
+                <g>
+                  <g>
+                    <path fill="#ededed" d="M0 3a3 3 0 1 1 6 0 3 3 0 0 1-6 0z" />
+                  </g>
+                </g>
+              </svg>
+            </button>
+            <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6">
+                <g>
+                  <g>
+                    <path fill="#ededed" d="M0 3a3 3 0 1 1 6 0 3 3 0 0 1-6 0z" />
+                  </g>
+                </g>
+              </svg>
+            </button>
+            <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6">
+                <g>
+                  <g>
+                    <path fill="#ededed" d="M0 3a3 3 0 1 1 6 0 3 3 0 0 1-6 0z" />
+                  </g>
+                </g>
+              </svg>
+            </button>
+            <button class="foreshortening__button" type="button" aria-label="Выбрать ракурс фото">
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6">
+                <g>
+                  <g>
+                    <path fill="#ededed" d="M0 3a3 3 0 1 1 6 0 3 3 0 0 1-6 0z" />
+                  </g>
+                </g>
+              </svg>
+            </button>
           </div>
-          <img src="img/ajmal-shadow.png" alt="Голубой флакон" class="presentation__product" srcset="img/ajmal-shadow@2x.png 2x">
+          <img src="img/ajmal-shadow.png" alt="Голубой флакон" class="presentation__product" srcset="img/ajmal-shadow@2x.png 2x" width="180" height="426">
           <div class="presentation__control control">
             <button class="control__button control__button--left" aria-label="Кнопка влево">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="10" viewBox="0 0 33 10">
+                <g>
+                  <g>
+                    <g>
+                      <path fill="none" stroke="gray" stroke-miterlimit="20" d="M33 5H1" />
+                    </g>
+                    <g>
+                      <path fill="none" stroke="gray" stroke-linecap="square" stroke-miterlimit="20" d="M5 1L1 5" />
+                    </g>
+                    <g>
+                      <path fill="none" stroke="gray" stroke-linecap="square" stroke-miterlimit="20" d="M5 9L1 5" />
+                    </g>
+                  </g>
+                </g>
+              </svg>
             </button>
             <button class="control__button control__button--right" aria-label="Кнопка вправо">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="10" viewBox="0 0 33 10">
+                <g>
+                  <g>
+                    <g>
+                      <path fill="none" stroke="gray" stroke-miterlimit="20" d="M0 5h32" />
+                    </g>
+                    <g>
+                      <path fill="none" stroke="gray" stroke-linecap="square" stroke-miterlimit="20" d="M28 1l4 4" />
+                    </g>
+                    <g>
+                      <path fill="none" stroke="gray" stroke-linecap="square" stroke-miterlimit="20" d="M28 9l4-4" />
+                    </g>
+                  </g>
+                </g>
+              </svg>
             </button>
           </div>
-          <button type="button" class="presentation__zoom-button" aria-label="Увеличить изображение"></button>
+          <button type="button" class="presentation__zoom-button button-modal" aria-label="Увеличить изображение">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25">
+              <g>
+                <g>
+                  <g>
+                    <path fill="gray" d="M13.177 9.44h-2.823V6.608a.471.471 0 1 0-.942 0V9.44H6.59a.471.471 0 0 0 0 .944h2.823v2.832a.471.471 0 1 0 .942 0v-2.832h2.823a.471.471 0 0 0 0-.944z" />
+                  </g>
+                  <g>
+                    <path fill="gray" d="M.942 9.912c0-4.945 4.01-8.968 8.941-8.968 4.93 0 8.941 4.023 8.941 8.968s-4.01 8.968-8.941 8.968c-4.93 0-8.941-4.023-8.941-8.968zm22.927 14.289l-6.992-7.294a9.896 9.896 0 0 0 2.888-6.995C19.765 4.446 15.332 0 9.883 0 4.433 0 .001 4.446.001 9.912c0 5.466 4.433 9.912 9.882 9.912a9.82 9.82 0 0 0 6.298-2.28l7.01 7.311a.466.466 0 0 0 .665.013.473.473 0 0 0 .013-.667z" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </button>
         </div>
       </section>
     </main>
   </div>
-  <div class="modal visually-hidden">
+  <div class="modal modal--off">
     <button class="modal__button" type="button" aria-label="Кнопка закрыть">
+      <div>
+        <div class="leftright"></div>
+        <div class="rightleft"></div>
+        <span class="close-btn">Закрыть</span>
+      </div>
     </button>
-    <img src="img/ajmal-shadow@4x.png" alt="Голубой флакон" class="modal__img">
+    <img src="img/ajmal-shadow@4x.png" alt="Голубой флакон" class="modal__img" width="360" height="850">
   </div>
+  <div class="toning toning--off"></div>
+  <script src="js/script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="js/stepper.min.js"></script>
 </body>
 
 </html>

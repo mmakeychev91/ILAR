@@ -112,6 +112,26 @@ textarea {
     scroll-behavior: auto !important;
   }
 }
+.toning--on {
+  position: fixed;
+  z-index: 49;
+  background-color: #ffffff;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.toning--off {
+  /* Позиционирование */
+  position: absolute;
+  clip: rect(0 0 0 0);
+  /* Блочная модель */
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 body {
   font-family: Montserrat;
   font-weight: 400;
@@ -139,6 +159,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 23px 76px;
+}
+@media (max-width: 1000px) {
+  .container--header {
+    display: block;
+  }
 }
 @media (max-width: 767px) {
   .container--header {
@@ -172,12 +197,25 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+@media (max-width: 1000px) {
+  .header__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .header__item {
   margin: 0 36px;
 }
 @media (max-width: 767px) {
   .header__item {
     margin-left: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .header__item {
+    margin: 0;
   }
 }
 .header__item:first-child {
@@ -213,6 +251,9 @@ body {
   cursor: pointer;
   border: none;
   background-color: #000000;
+}
+.header__button--white {
+  background-color: #fff;
 }
 .header__button span {
   position: absolute;
@@ -282,6 +323,8 @@ body {
   }
 }
 .new-product__presentation {
+  padding-top: 60px;
+  padding-bottom: 60px;
   border: 1px solid #ededed;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
@@ -344,6 +387,16 @@ body {
   margin-left: auto;
   padding-top: 16px;
 }
+@media (max-width: 1149px) {
+  .product-cart__text--video-about {
+    border-top: none;
+  }
+}
+@media (max-width: 867px) {
+  .product-cart__text--video-about {
+    margin-left: 0;
+  }
+}
 .product-cart__text--product-description {
   position: relative;
   margin-bottom: 34px;
@@ -400,16 +453,37 @@ body {
           flex: 0 1 33.333%;
   background-color: #f4f4f4;
 }
+@media (max-width: 1236px) {
+  .product-cart__price {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
 .product-cart__quantity {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33.333%;
           flex: 0 1 33.333%;
   background-color: #ededed;
 }
+@media (max-width: 1236px) {
+  .product-cart__quantity {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
 .product-cart__button-box {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33.333%;
           flex: 0 1 33.333%;
+}
+@media (max-width: 1236px) {
+  .product-cart__button-box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
 }
 
 .article {
@@ -438,6 +512,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .availability__parameter {
   margin-right: 5px;
@@ -489,7 +565,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 32px 20px;
+  padding: 10px 32px 10px;
 }
 .price__text {
   color: #54402c;
@@ -508,7 +584,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px 32px 20px;
+  padding: 10px 32px 10px;
 }
 .quantity__input-box {
   display: -webkit-box;
@@ -539,6 +615,8 @@ body {
 }
 .quantity__button--minus {
   cursor: pointer;
+  outline: 5px solid #6633cc;
+  outline-offset: -5px;
 }
 .quantity__button--plus {
   cursor: pointer;
@@ -549,10 +627,22 @@ input[type=number] {
 }
 
 .button-box {
-  padding: 0 32px 0 77px;
+  padding: 10px 32px 10px 77px;
   cursor: pointer;
   background-color: #fff3e0;
   border: none;
+}
+@media (max-width: 1236px) {
+  .button-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 64px;
+    padding-right: 0;
+  }
 }
 .button-box__text {
   position: relative;
@@ -568,4 +658,406 @@ input[type=number] {
   width: 16px;
   height: 19px;
   background-image: url("../img/icons/packet.svg");
+}
+
+.presentation {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100%;
+  padding: 0 33px;
+}
+@media (max-width: 767px) {
+  .presentation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+  }
+}
+.presentation__foreshortening {
+  margin-right: 265px;
+}
+@media (max-width: 1203px) {
+  .presentation__foreshortening {
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .presentation__product {
+    margin: 0 auto 60px;
+  }
+}
+@media (min-width: 768px) and (max-width: 940px) {
+  .presentation__product {
+    margin: 60px auto 60px;
+  }
+}
+@media (min-width: 941px) and (max-width: 1204px) {
+  .presentation__product {
+    margin: 0 auto;
+  }
+}
+.presentation__zoom-button {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .presentation__zoom-button {
+    bottom: 12px;
+    right: 12px;
+  }
+}
+@media (max-width: 419px) {
+  .presentation__zoom-button {
+    display: none;
+  }
+}
+
+.foreshortening {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 77px;
+  outline: none;
+}
+@media (max-width: 767px) {
+  .foreshortening {
+    display: block;
+  }
+}
+.foreshortening__button {
+  margin: 7px 0;
+  background: transparent;
+  border: none;
+  width: 6px;
+  height: 6px;
+  cursor: pointer;
+}
+.foreshortening__button svg:hover path {
+  fill: #292929;
+}
+.foreshortening__button svg:hover {
+  width: 8px;
+  height: 8px;
+}
+.foreshortening__button:focus {
+  outline: none;
+}
+.foreshortening__button:active {
+  outline: none;
+}
+.foreshortening__button:first-child {
+  margin-top: 0;
+}
+.foreshortening__button:last-child {
+  margin-bottom: 0;
+}
+
+.control {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.control__button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 96px;
+  height: 44px;
+}
+.control__button:hover path {
+  stroke: #f1b255;
+}
+.control__button--left {
+  border-top: 1px solid #f4f4f4;
+}
+.control__button--right {
+  border-top: 1px solid #f4f4f4;
+  border-left: 1px solid #f4f4f4;
+  border-right: 1px solid #f4f4f4;
+}
+
+.modal {
+  position: relative;
+  padding: 50px;
+}
+@media (max-width: 767px) {
+  .modal {
+    padding: 30px;
+  }
+}
+.modal__img {
+  margin: 0 auto;
+}
+.modal--off {
+  /* Позиционирование */
+  position: absolute;
+  clip: rect(0 0 0 0);
+  /* Блочная модель */
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.modal--on {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__button {
+  position: absolute;
+  right: 50px;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal__button div {
+  cursor: pointer;
+  position: relative;
+  height: 68px;
+  width: 50px;
+}
+
+.modal__button .leftright {
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: #292929;
+  border-radius: 2px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.modal__button .rightleft {
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: #292929;
+  border-radius: 2px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.modal__button .close-btn {
+  margin: 54px 0 0 -5px;
+  position: absolute;
+  color: #292929;
+  font-family: Tahoma, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+}
+
+.modal__button div:hover .leftright {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-color: #000;
+}
+
+.modal__button div:hover .rightleft {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #000;
+}
+
+.modal__button div:hover .close-btn {
+  opacity: 1;
+}
+
+/* base style */
+.stepper {
+  display: inline-block;
+  max-width: 120px;
+  position: relative;
+}
+
+.stepper__input {
+  width: 100%;
+  height: 50px;
+  padding: 0.375rem 0.75rem;
+  border: none;
+  -moz-appearance: textfield;
+}
+
+.stepper__input:focus {
+  color: #333;
+  background-color: #fff;
+  border-color: #c4c4c4;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.stepper__input::-webkit-inner-spin-button,
+.stepper__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.stepper__controls {
+  outline: 5px solid #6633cc;
+  outline-offset: -5px;
+}
+
+.stepper__controls [spinner-button=up],
+.stepper__controls [spinner-button=down] {
+  outline: 5px solid #6633cc;
+  outline-offset: -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  outline: none;
+  border: 1px solid #c4c4c4;
+  background-color: transparent;
+  height: 50%;
+  font-size: 1.375em;
+  line-height: 0;
+  -webkit-transition: all ease 0.25s;
+  -o-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+}
+
+/* style 1 */
+.stepper--style-1 .stepper__input {
+  padding-right: 3.25rem;
+}
+
+.stepper--style-1 .stepper__controls {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: -1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 2.5rem;
+  z-index: 1;
+}
+
+.stepper--style-1 [spinner-button=up] {
+  margin-bottom: -1px;
+}
+
+/* style 2 */
+.stepper--style-2 {
+  max-width: 140px;
+}
+
+.stepper--style-2 .stepper__input {
+  padding-left: 3.25rem;
+  padding-right: 3.25rem;
+  text-align: center;
+}
+
+.stepper--style-2 [spinner-button=up],
+.stepper--style-2 [spinner-button=down] {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: -1px;
+  width: 2.5rem;
+  z-index: 1;
+}
+
+.stepper--style-2 [spinner-button=up] {
+  right: 0;
+  margin-left: -1px;
+}
+
+.stepper--style-2 [spinner-button=down] {
+  left: 0;
+  margin-right: -1px;
+}
+
+/* style 3*/
+.stepper--style-3 {
+  max-width: 140px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.stepper--style-3 .stepper__input {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.stepper--style-3 [spinner-button=up],
+.stepper--style-3 [spinner-button=down] {
+  border: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: -1px;
+  width: 2.5rem;
+}
+
+.stepper--style-3 [spinner-button=up] {
+  right: 0;
+  margin-left: -1px;
+}
+
+.stepper--style-3 [spinner-button=down] {
+  left: 0;
+  margin-right: -1px;
 }
